@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff&family=Josefin+Sans:wght@300&family=Nunito&family=Ubuntu+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'DynaPuff', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+body{
+    height: 100vh;
+    max-width: 100%;
+    min-width: 100%;
+    background: linear-gradient(120deg, blue, red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: move 5s cubic-bezier(0.23, 1, 0.320, 1) infinite;
+}
+.relogio{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10vw;
+    max-width: 80vw;
+    min-width: 40vw;
+    background: transparent;
+    border-radius: 3px;
+}
+.relogio div{
+    width: clamp(150px, 20%, 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0,0,0,.5);
+    box-shadow: 5px 7px 10px 8px rgba(0,0,0,.5);
+    border-radius: 7px;
+    letter-spacing: 0.2em;
+}
+.relogio span{
+    font-weight:  bold;
+    font-size: 60px;
+    cursor: pointer;
+}
+.relogio span.tempo{
+    font-size: 10px;
+}
+span:hover{
+    transform: scale(1.1);
+}
+@keyframes move{
+    0%  {background: linear-gradient(120deg, blue, red, 1s);}
+    25% {background: linear-gradient(120deg, rgb(21, 21, 255), rgb(255, 33, 33)); transform: scale(1.1);}
+    50% {background: linear-gradient(120deg, rgb(73, 73, 255) rgb(255, 100, 100));}
+    100% {background: linear-gradient(120deg, rgb(67, 67, 255),rgb(255, 48, 48));}
+    50% {background: linear-gradient(120deg, rgb(37, 37, 255), rgb(255, 36, 36)); transition: 0.3s ease-in;} 
+    0%  {background: linear-gradient(120deg, blue, red);}
+   
+}
